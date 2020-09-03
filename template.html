@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quize</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css.map">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link href="dist/google-material-icons/material_icons.css" rel="stylesheet">
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper" style="overflow-y:hidden;">
+        <div class="content-wrapper">
+            <div ng-view></div>
+        </div>
+    </div>
+    <script src="dist/ang/angular.min.js"></script>
+    <script src="dist/ang/angular-route.min.js"></script>
+    <script src="dist/ang/appDomain.js"></script>
+    <script src="dist/ang/main_app.js"></script>
+    <script src="content/login/login.js"></script>
+    <script src="content/quize/quize.js"></script>
+    <script src="content/admin/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="content/quize/quize.css">
+<section class="content">
+    <div class="container main-container pr" style="width: 100%;margin: 0px;min-height:{{windowHeight}}px;">
+        <div style="margin:10px 0px 0px 30px;">
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8 ">
+                    <div class="participate-survey-section1">
+                        <div class="section-body" ng-if="flagforQuize" style="padding: 30px;">
+                            <div>Quize alredy Submmited </div>
+                        </div>
+                        <div class="section-body" ng-if="!flagforQuize">
+                            <div class="ques-section" ng-repeat="x in questionList">
+                                <div class="ques-vert-center content-list" style="width:100%">
+                                    <div class="ques-txt">
+                                        {{$index+1}}. {{x.question}}
+                                        <label class="asterisk-color">*</label>
+                                    </div>
+                                    <div class="ques-opt">
+                                        <input type="text" class="input-text" name="answer" style="width:100%" ng-model="x.answer" placeholder="Your Answer">
+                                        <span class="highlight"></span>
+                                        <span class="bar" style="width:100%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="btn btn-success btn-sm btn-rounded waves-effect waves-light" type="button" style="text-transform: capitalize;margin-top: 0px;" ng-click="addOrUpdateRequestList()">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

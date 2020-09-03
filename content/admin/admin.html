@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="content/admin/admin.css">
+<section class="content">
+    <div class="container main-container pr" style="width: 100%;margin: 0px;min-height:{{windowHeight}}px;">
+        <div style="margin:10px 0px 0px 30px;">
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8 ">
+                    <div class="participate-survey-section1">
+
+
+                        <div style="padding:20px;background: white;font-size: 20px;
+                        font-weight: 600;
+                        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);">Total participted Users: {{quizePartciptelist.length}} </div>
+                        <div class="table-responsive" style="height: 300px;overflow-y: auto;padding: 10px">
+                            <table id="customers" class="table table-striped table-bordered" style="margin-top: 10px;width: 100%">
+                                <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Attempted Question</th>
+                                        <th>Unattempted Question</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in quizePartciptelist">
+                                        <td>
+                                            {{x.username}}
+                                        </td>
+                                        <td>
+                                            {{x.attemptetCount}}
+                                        </td>
+                                        <td>
+                                            {{5-(x.attemptetCount)}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
